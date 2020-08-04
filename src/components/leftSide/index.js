@@ -9,11 +9,11 @@ function LeftSide() {
       </div>
       <form className="leftSideForm" action="/index.html">
         <div className="dropdownTitle">
-          <h3>1st Band of Color:</h3>
+          <h3>1st Band - First Value:</h3>
         </div>
         <div id="selectorOne">
           <select name="colorSelection" class="firstBand">
-            <option selected="selected">First color</option>
+            <option selected="selected">First Value</option>
             <option value="1">Black - 0</option>
             <option value="2">Brown - 1</option>
             <option value="3">Red - 2</option>
@@ -27,11 +27,11 @@ function LeftSide() {
           </select>
         </div>
         <div className="dropdownTitle">
-          <h3>2nd Band of Color:</h3>
+          <h3>2nd Band - Second Value:</h3>
         </div>
         <div id="selectorTwo">
           <select name="colorSelection" class="secondBand">
-            <option selected="selected">Second color</option>
+            <option selected="selected">Second Value</option>
             <option value="1">Black - 0</option>
             <option value="2">Brown - 1</option>
             <option value="3">Red - 2</option>
