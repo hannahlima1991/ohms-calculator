@@ -1,14 +1,5 @@
-.leftSide {
-  width: 500px;
-  height: 500px;
-  display: inline-block;
-  vertical-align: top;
-}
-.title {
-  text-align: center;
-}
 .leftSideForm {
-  margin: 25px 50px;
+  margin-top: 130px;
 }
 .dropdownTitle {
   margin-bottom: 15px;
@@ -30,10 +21,12 @@
   width: 156px;
 }
 .calculationButton {
-  margin-left: 50px;
+  margin-left: 18px;
+  margin-top: 15px;
 }
 .calculateOhms {
-  width: 138px;
+  width: 114px;
+  border-radius: 10px;
   background-color: white;
   color: black;
   border: 2px solid #4caf50;
