@@ -5,9 +5,11 @@ import RightSide from "./components/rightSide";
 
 function App() {
   return (
-    <div className="App">
-      <LeftSide />
-      <RightSide />
+    <div className="App container">
+      <div className="row">
+        <LeftSide />
+        <RightSide />
+      </div>
     </div>
   );
 }

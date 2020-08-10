@@ -21,15 +21,12 @@ function LeftSide() {
   }, [fourthColorChange]);
 
   return (
-    <div className="leftSide">
-      <div className="title">
-        <h1>This is the left side.</h1>
-      </div>
+    <div className="col-lg-6 leftSide">
       <form className="leftSideForm" action="/index.html">
-        <div className="dropdownTitle">
+        <div className="row dropdownTitle">
           <h3>1st Band - First Value:</h3>
         </div>
-        <div id="selectorOne">
+        <div id=" selectorOne">
           <select
             className="firstBand"
             value={firstColorChange}
@@ -114,10 +111,10 @@ function LeftSide() {
             <option value="8">Silver ± 10%</option>
           </select>
         </div>
+        <div className="calculationButton">
+          <button className="calculateOhms">Calculator</button>
+        </div>
       </form>
-      <div className="calculationButton">
-        <button className="calculateOhms">Calculator</button>
-      </div>
     </div>
   );
 }
