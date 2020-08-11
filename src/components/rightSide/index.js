@@ -1,7 +1,9 @@
 import React from "react";
 import "./RightSide.css";
 
-function RightSide() {
+function RightSide(props) {
+  const { firstBand, secondBand, thirdBand, fourthBand } = props;
+
   return (
     <div className="col-lg-6 ">
       <div>
@@ -12,10 +14,10 @@ function RightSide() {
               class="card-img-top"
               alt="ohms resistor"
             />
-            <div className="firstColorBand">a</div>
-            <div className="secondColorBand">b</div>
-            <div className="thirdColorBand">c</div>
-            <div className="fourthColorBand">d</div>
+            <div className={`firstColorBand ${firstBand}`}>a</div>
+            <div className={`secondColorBand ${secondBand}`}>b</div>
+            <div className={`thirdColorBand ${thirdBand}`}>c</div>
+            <div className={`fourthColorBand ${fourthBand}`}>d</div>
           </div>
           <div className="resultContainer"></div>
         </div>
@@ -25,7 +27,3 @@ function RightSide() {
 }
 
 export default RightSide;
-
-{
-  /* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/4-Band_Resistor.svg/2000px-4-Band_Resistor.svg.png"></img> */
-}
