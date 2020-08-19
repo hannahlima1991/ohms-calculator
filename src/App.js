@@ -9,25 +9,32 @@ function App() {
   const [thirdColorChange, setThirdColorChange] = useState("");
   const [fourthColorChange, setfourthColorChange] = useState("");
 
+  const [result, changeResult] = useState("");
+
   return (
-    <div className="App container">
-      <div className="row">
-        <LeftSide
-          firstBand={firstColorChange}
-          firstBandChange={setFirstColorChange}
-          secondBand={secondColorChange}
-          secondBandChange={setSecondColorChange}
-          thirdBand={thirdColorChange}
-          thirdBandChange={setThirdColorChange}
-          fourthBand={fourthColorChange}
-          fourthBandChange={setfourthColorChange}
-        />
-        <RightSide
-          firstBand={firstColorChange}
-          secondBand={secondColorChange}
-          thirdBand={thirdColorChange}
-          fourthBand={fourthColorChange}
-        />
+    <div className="App">
+      <h1>Welcome to Ohms Calculator</h1>
+      <div className="container">
+        <div className="row">
+          <LeftSide
+            firstBand={firstColorChange}
+            firstBandChange={setFirstColorChange}
+            secondBand={secondColorChange}
+            secondBandChange={setSecondColorChange}
+            thirdBand={thirdColorChange}
+            thirdBandChange={setThirdColorChange}
+            fourthBand={fourthColorChange}
+            fourthBandChange={setfourthColorChange}
+            changeResult={changeResult}
+          />
+          <RightSide
+            firstBand={firstColorChange}
+            secondBand={secondColorChange}
+            thirdBand={thirdColorChange}
+            fourthBand={fourthColorChange}
+            result={result}
+          />
+        </div>
       </div>
     </div>
   );

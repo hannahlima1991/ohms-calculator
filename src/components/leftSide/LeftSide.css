@@ -1,5 +1,5 @@
 .leftSideForm {
-  margin-top: 130px;
+  margin-top: 117px;
 }
 .dropdownTitle {
   margin-bottom: 15px;
@@ -7,6 +7,7 @@
 }
 .dropdownTitle h3 {
   font-family: monospace;
+  color: #1c2541;
 }
 .firstBand {
   width: 156px;
@@ -22,16 +23,18 @@
 }
 .calculationButton {
   margin-left: 18px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .calculateOhms {
-  width: 114px;
-  border-radius: 10px;
+  width: 120px;
+  border-radius: 6px;
   background-color: white;
-  color: black;
-  border: 2px solid #4caf50;
+  color: #1c2541;
+  border: 1px solid #0d3b66;
+  font-family: monospace;
+  font-size: revert;
 }
 .calculateOhms:hover {
-  background-color: #4caf50;
+  background-color: #0d3b66;
   color: white;
 }
