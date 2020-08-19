@@ -1,16 +1,19 @@
 .imageContainer {
   position: relative;
-  margin-top: 100px;
 }
 .imageContainer img {
   width: 334px;
 }
+.rightSidePosition {
+  margin-top: 94px;
+}
 .firstColorBand {
   position: absolute;
   height: 81px;
-  width: 18px;
-  left: 100px;
+  width: 19px;
+  left: 99px;
   top: 36px;
+  border-radius: 3px;
 }
 .secondColorBand {
   position: absolute;
@@ -18,6 +21,7 @@
   width: 18px;
   left: 125px;
   top: 41px;
+  border-radius: 3px;
 }
 .thirdColorBand {
   position: absolute;
@@ -25,6 +29,7 @@
   width: 18px;
   left: 150px;
   top: 44px;
+  border-radius: 2px;
 }
 .fourthColorBand {
   position: absolute;
@@ -32,8 +37,10 @@
   width: 18px;
   left: 200px;
   top: 40px;
+  border-radius: 1px;
 }
 .resultContainer {
+  border-radius: 10px;
   background: white;
   margin-top: 20px;
   width: 334px;
