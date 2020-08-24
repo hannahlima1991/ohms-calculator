@@ -2,6 +2,7 @@ import React from "react";
 import "./RightSide.css";
 
 function RightSide(props) {
+  //importing the props from the parent component
   const { firstBand, secondBand, thirdBand, fourthBand, result } = props;
   console.log(result);
   return (
@@ -14,12 +15,18 @@ function RightSide(props) {
               class="card-img-top"
               alt="ohms resistor"
             />
+            {/* thease are the divs i have created and positioned over the existing ones,
+            once the user selects an option,the new state is fired changing the color 
+            of this div from non-existing to the value that was selected. */}
             <div className={`firstColorBand ${firstBand}`}></div>
             <div className={`secondColorBand ${secondBand}`}></div>
             <div className={`thirdColorBand ${thirdBand}`}></div>
             <div className={`fourthColorBand ${fourthBand}`}></div>
           </div>
-          <div className="resultContainer">{result}</div>
+          {/* the result is then displayed to the user. */}
+          <div className="resultContainer">
+            <h4>{result}</h4>
+          </div>
         </div>
       </div>
     </div>
@@ -27,4 +34,3 @@ function RightSide(props) {
 }
 
 export default RightSide;
-// The current (I) = Voltage (V) / Resistance (Ohms). The Power (P) = I * V (Current * Voltage)
