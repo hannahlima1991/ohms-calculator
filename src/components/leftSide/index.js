@@ -1,6 +1,7 @@
 import React from "react";
 import "./LeftSide.css";
 
+//Bellow are 4 objects that translate every option's value into math values for the Ohms formula.
 const firstBandTranslation = {
   brown: 1,
   red: 2,
@@ -44,17 +45,55 @@ const fourthBandTranslation = {
   silver: "± 10% Tolerance",
 };
 
+//This function takes the 4 option bands as arguments,this way I capture the user input
 function calculateOhms(firstBand, secondBand, thirdBand, fourthBand) {
   const firstBandTranslated = firstBandTranslation[firstBand];
   const secondBandTranslated = secondBandTranslation[secondBand];
   const thirdBandTranslated = thirdBandTranslation[thirdBand];
   const fourthBandTranslated = fourthBandTranslation[fourthBand];
+  //Here is where I apply a formula using the translated values declared in the objects above.
   const firstSecondBandCalc = firstBandTranslated * 10 + secondBandTranslated;
-  const totalOhms = firstSecondBandCalc * thirdBandTranslated;
-
+  let totalOhms = firstSecondBandCalc * thirdBandTranslated;
+  totalOhms = formatedResult(totalOhms);
   return totalOhms + fourthBandTranslated;
 }
 
+//Here I compare the amount of digits coming out of the formula as a result,
+//string.length is the amount os digits for the total of ohms,
+//based on that I return the same string or divide it so it can be easier to read.
+function formatedResult(number) {
+  const string = "" + number;
+  switch (true) {
+    case string.length === 2:
+      console.log(number, "I am 2");
+      return string;
+    case string.length === 3:
+      console.log(number, "I am 3");
+      return number;
+    case string.length === 4:
+      console.log(number, "I am 4");
+      return +number / 1000 + "KΩ";
+    case string.length === 5:
+      console.log(number, "I am 5");
+      return +number / 1000 + "KΩ";
+    case string.length === 6:
+      console.log(number, "I am 6");
+      return +number / 1000 + "KΩ";
+    case string.length === 7:
+      console.log(number, "I am 7");
+      return +number / 1000000 + "MΩ";
+    case string.length === 8:
+      console.log(number, "I am 8");
+      return +number / 1000000 + "MΩ";
+    case string.length === 9:
+      console.log(number, "I am 9");
+      return +number / 1000000 + "MΩ";
+    default:
+      return "error,please try again.";
+  }
+}
+//Here I am importing the props from the parent to use on my dropdowns and capture the user's choice
+//as the new state.
 function LeftSide(props) {
   const {
     changeResult,
@@ -77,7 +116,9 @@ function LeftSide(props) {
         <div id=" selectorOne">
           <select
             className="firstBand"
+            //the value is the user selection
             value={firstBand}
+            //and once it changes it becomes the new state.
             onChange={(event) => firstBandChange(event.target.value)}
           >
             <option value="" disabled selected>
@@ -164,6 +205,8 @@ function LeftSide(props) {
         <div className="calculationButton">
           <button
             className="calculateOhms"
+            // once clicked, the result will be calculated using the function that was a bove 'calculateOhms'
+            //every value will be captured, and will fire the changeResult prop.
             onClick={() => {
               const result = calculateOhms(
                 firstBand,
