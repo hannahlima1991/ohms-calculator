@@ -10,3 +10,4 @@
 - npm install,
 - npm start.
 
+Live Link: ohms-calculator.surge.sh
